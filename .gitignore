@@ -1,0 +1,38 @@
+# Maven (Java)
+target/
+*.class
+*.jar
+*.war
+*.ear
+.project
+.classpath
+.settings/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+lib/
+lib64/
+bin/
+include/
+sdist/
+var/
+pip-selfcheck.json
+.pytest_cache/
+reports/screenshots/
+.web_assets/
+
+# IDEs & System files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db

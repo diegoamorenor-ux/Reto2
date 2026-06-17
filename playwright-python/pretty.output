@@ -1,0 +1,13 @@
+Feature: Product Sorting and Price Consistency on SauceDemo # features/sorting_and_prices.feature:2
+
+  Scenario: Sort products by price from low to high                                          # features/sorting_and_prices.feature:4
+    Given the user is logged into the SauceDemo catalog page                                 # features/steps/sorting_and_prices_steps.py:6
+    When they sort the products by "Price (low to high)"                                     # features/steps/sorting_and_prices_steps.py:14
+    Then the products should be ordered correctly from the lowest price to the highest price # features/steps/sorting_and_prices_steps.py:21
+
+  Scenario: Validate product price consistency in the shopping cart                      # features/sorting_and_prices.feature:9
+    Given the user is logged into the SauceDemo catalog page                             # features/steps/sorting_and_prices_steps.py:6
+    When they add the product "Sauce Labs Fleece Jacket" to the cart                     # features/steps/sorting_and_prices_steps.py:28
+    And they navigate to the shopping cart                                               # features/steps/sorting_and_prices_steps.py:35
+    Then the price of the product in the cart should match the catalog price of "$49.99" # features/steps/sorting_and_prices_steps.py:42
+
