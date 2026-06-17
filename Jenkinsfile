@@ -11,7 +11,8 @@ pipeline {
             steps {
                 echo '=== Checking Installed Environment Tools ==='
                 sh 'java -version'
-                sh 'mvn -version'
+                sh 'chmod +x ./serenity-bdd-java/mvnw'
+                sh './serenity-bdd-java/mvnw -version'
                 sh 'python3 --version'
                 sh 'pip3 --version'
             }
@@ -22,7 +23,8 @@ pipeline {
                 echo '=== Running Serenity BDD (Java) Tests ==='
                 dir('serenity-bdd-java') {
                     // Running clean verify executes tests and generates aggregate Serenity reports
-                    sh 'mvn clean verify'
+                    sh 'chmod +x mvnw'
+                    sh './mvnw clean verify'
                 }
             }
             post {
