@@ -53,8 +53,8 @@ pipeline {
             post {
                 always {
                     echo '=== Archiving Playwright Evidence ==='
-                    // Archives screenshots generated on test failures
-                    archiveArtifacts artifacts: 'playwright-python/reports/screenshots/**/*.png', allowEmptyArchive: true
+                    // Archives screenshots and JUnit reports
+                    archiveArtifacts artifacts: 'playwright-python/reports/**/*', allowEmptyArchive: true
                 }
             }
         }
